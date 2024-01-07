@@ -10,19 +10,16 @@ export default function RegisterPage() {
   const [creatingUser, setCreatingUser] = useState(false);
   const [userCreated, setUserCreated] = useState(false);
   const [error, setError] = useState(false);
-
-  async function handleFormSubmit(e) {
-    e.preventDefault();
+  async function handleFormSubmit(ev) {
+    ev.preventDefault();
     setCreatingUser(true);
     setError(false);
     setUserCreated(false);
-
     const response = await fetch("/api/register", {
       method: "POST",
       body: JSON.stringify({ email, password }),
       headers: { "Content-Type": "application/json" },
     });
-
     if (response.ok) {
       setUserCreated(true);
     } else {
@@ -30,10 +27,9 @@ export default function RegisterPage() {
     }
     setCreatingUser(false);
   }
-
   return (
     <section className="mt-8">
-      <h1 className="text-primary text-center text-4xl mb-4">Register</h1>
+      <h1 className="text-center text-primary text-4xl mb-4">Register</h1>
       {userCreated && (
         <div className="my-4 text-center">
           User created.
@@ -54,17 +50,17 @@ export default function RegisterPage() {
       <form className="block max-w-xs mx-auto" onSubmit={handleFormSubmit}>
         <input
           type="email"
-          placeholder="Email"
+          placeholder="email"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
           disabled={creatingUser}
+          onChange={(ev) => setEmail(ev.target.value)}
         />
         <input
           type="password"
-          placeholder="Password"
+          placeholder="password"
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
           disabled={creatingUser}
+          onChange={(ev) => setPassword(ev.target.value)}
         />
         <button type="submit" disabled={creatingUser}>
           Register
@@ -73,12 +69,11 @@ export default function RegisterPage() {
           or login with provider
         </div>
         <button
-          type="button"
           onClick={() => signIn("google", { callbackUrl: "/" })}
           className="flex gap-4 justify-center"
         >
-          <Image src={"/google.png"} alt={""} width={24} height={24}></Image>
-          Login with Google
+          <Image src={"/google.png"} alt={""} width={24} height={24} />
+          Login with google
         </button>
         <div className="text-center my-4 text-gray-500 border-t pt-4">
           Existing account?{" "}

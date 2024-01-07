@@ -7,23 +7,27 @@ export default function Home() {
     <>
       <Hero />
       <HomeMenu />
-      <section className="text-center my-16">
-        <SectionHeaders subHeader={"Our Story"} mainHeader={"About us"} />
-        <div className="text-gray-500 max-w-2xl  mx-auto mt-4 flex flex-col gap-4">
+      <section className="text-center my-16" id="about">
+        <SectionHeaders subHeader={"Our story"} mainHeader={"About us"} />
+        <div className="text-gray-500 max-w-md mx-auto mt-4 flex flex-col gap-4">
           <p>
-            Magna velit nostrud incididunt in do anim quis irure elit nostrud
-            anim. Nisi culpa tempor et est aliqua do nulla aute enim ut proident
-            mollit. Anim ad officia voluptate est amet commodo ad magna dolor
-            sit cillum laborum consectetur esse.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni
+            minima odit recusandae. Illum ipsa non repudiandae? Eum ipsam iste
+            quos suscipit tempora? Aperiam esse fugiat inventore laboriosam
+            officiis quam rem!
           </p>
           <p>
-            Nisi culpa tempor et est aliqua do nulla aute enim ut proident
-            mollit. Anim ad officia voluptate est amet commodo ad magna dolor
-            sit cillum laborum consectetur esse.
+            At consectetur delectus ducimus est facere iure molestias obcaecati
+            quaerat vitae voluptate? Aspernatur dolor explicabo iste minus
+            molestiae pariatur provident quibusdam saepe?
+          </p>
+          <p>
+            Laborum molestias neque nulla obcaecati odio quia quod reprehenderit
+            sit vitae voluptates? Eos, tenetur.
           </p>
         </div>
       </section>
-      <section className="text-center my-8">
+      <section className="text-center my-8" id="contact">
         <SectionHeaders
           subHeader={"Don't hesitate"}
           mainHeader={"Contact us"}
@@ -31,9 +35,9 @@ export default function Home() {
         <div className="mt-8">
           <a
             className="text-4xl underline text-gray-500"
-            href="tel:+48577561130"
+            href="tel:+46738123123"
           >
-            +48 577 561 130
+            +46 577 561 130
           </a>
         </div>
       </section>
