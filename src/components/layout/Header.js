@@ -40,7 +40,6 @@ function AuthLinks({ status, userName }) {
 export default function Header() {
   const session = useSession();
   const status = session?.status;
-  console.log(status);
   const userData = session.data?.user;
   let userName = userData?.name || userData?.email;
   const { cartProducts } = useContext(CartContext);

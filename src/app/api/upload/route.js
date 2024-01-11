@@ -5,7 +5,6 @@ export async function POST(req) {
   const data = await req.formData();
   if (data.get("file")) {
     const file = data.get("file");
-    console.log(file);
     const s3Client = new S3Client({
       region: "eu-north-1",
       credentials: {
@@ -22,7 +21,6 @@ export async function POST(req) {
       chunks.push(chunk);
     }
     const buffer = Buffer.concat(chunks);
-    console.log("s3Client", buffer);
 
     const bucket = "abror-food-ordering";
     try {
@@ -41,7 +39,6 @@ export async function POST(req) {
     }
 
     const link = "https://" + bucket + ".s3.amazonaws.com/" + newFileName;
-    console.log("link ", link);
     return Response.json(link);
   }
   return Response.json(true);

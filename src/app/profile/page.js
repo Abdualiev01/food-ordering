@@ -19,8 +19,8 @@ export default function ProfilePage() {
     if (status === "authenticated") {
       fetch("/api/profile").then((response) => {
         response.json().then((data) => {
-          setUser(session.data.user);
-          setIsAdmin();
+          setUser(data);
+          setIsAdmin(data.admin);
           setProfileFetched(true);
         });
       });
@@ -54,6 +54,7 @@ export default function ProfilePage() {
   if (status === "unauthenticated") {
     return redirect("/login");
   }
+  console.log(isAdmin);
 
   return (
     <section className="mt-8">

@@ -16,7 +16,6 @@ export async function PUT(req) {
     filter = { _id };
   } else {
     const session = await getServerSession(authOptions);
-    console.log(session);
     const email = session.user.email;
     filter = { email };
   }
