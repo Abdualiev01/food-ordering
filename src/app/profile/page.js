@@ -54,8 +54,6 @@ export default function ProfilePage() {
   if (status === "unauthenticated") {
     return redirect("/login");
   }
-  console.log(isAdmin);
-
   return (
     <section className="mt-8">
       <UserTabs isAdmin={isAdmin} />
