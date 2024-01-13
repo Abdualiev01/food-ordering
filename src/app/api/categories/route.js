@@ -18,8 +18,8 @@ export async function PUT(req) {
   mongoose.connect(process.env.MONGO_URL);
   const { _id, name } = await req.json();
   await Category.updateOne({ _id }, { name });
-//   if (await isAdmin()) {
-//   }
+  //   if (await isAdmin()) {
+  //   }
   return Response.json(true);
 }
 
