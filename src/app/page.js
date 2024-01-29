@@ -1,3 +1,4 @@
+import Header from "@/components/layout/Header";
 import Hero from "@/components/layout/Hero";
 import HomeMenu from "@/components/layout/HomeMenu";
 import SectionHeaders from "@/components/layout/SectionHeaders";
@@ -35,9 +36,9 @@ export default function Home() {
         <div className="mt-8">
           <a
             className="text-4xl underline text-gray-500"
-            href="tel:+46738123123"
+            href="tel:+48577561130"
           >
-            +46 577 561 130
+            +48 577 561 130
           </a>
         </div>
       </section>

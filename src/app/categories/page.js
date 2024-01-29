@@ -1,8 +1,8 @@
 "use client";
 import DeleteButton from "@/components/DeleteButton";
 import UserTabs from "@/components/layout/UserTabs";
-import { useProfile } from "@/components/UseProfile";
 import { useEffect, useState } from "react";
+import { useProfile } from "@/components/UseProfile";
 import toast from "react-hot-toast";
 
 export default function CategoriesPage() {
@@ -78,6 +78,7 @@ export default function CategoriesPage() {
   if (!profileData.admin) {
     return "Not an admin";
   }
+
   return (
     <section className="mt-8 max-w-2xl mx-auto">
       <UserTabs isAdmin={true} />

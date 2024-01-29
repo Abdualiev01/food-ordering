@@ -1,12 +1,14 @@
 "use client";
 import DeleteButton from "@/components/DeleteButton";
-import { useProfile } from "@/components/UseProfile";
 import Left from "@/components/icons/Left";
+import EditableImage from "@/components/layout/EditableImage";
 import MenuItemForm from "@/components/layout/MenuItemForm";
 import UserTabs from "@/components/layout/UserTabs";
+import { useProfile } from "@/components/UseProfile";
 import Link from "next/link";
-import { useParams } from "next/navigation";
+import { redirect, useParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 export default function EditMenuItemPage() {
   const { id } = useParams();

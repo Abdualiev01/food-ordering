@@ -23,7 +23,7 @@ export default function LoginPage() {
         <input
           type="email"
           name="email"
-          placeholder="Email"
+          placeholder="email"
           value={email}
           disabled={loginInProgress}
           onChange={(ev) => setEmail(ev.target.value)}
@@ -31,7 +31,7 @@ export default function LoginPage() {
         <input
           type="password"
           name="password"
-          placeholder="Password"
+          placeholder="password"
           value={password}
           disabled={loginInProgress}
           onChange={(ev) => setPassword(ev.target.value)}

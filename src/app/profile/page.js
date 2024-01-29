@@ -1,8 +1,12 @@
 "use client";
+import EditableImage from "@/components/layout/EditableImage";
+import InfoBox from "@/components/layout/InfoBox";
+import SuccessBox from "@/components/layout/SuccessBox";
 import UserForm from "@/components/layout/UserForm";
 import UserTabs from "@/components/layout/UserTabs";
 import { useSession } from "next-auth/react";
-
+import Image from "next/image";
+import Link from "next/link";
 import { redirect } from "next/navigation";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
@@ -54,6 +58,7 @@ export default function ProfilePage() {
   if (status === "unauthenticated") {
     return redirect("/login");
   }
+
   return (
     <section className="mt-8">
       <UserTabs isAdmin={isAdmin} />

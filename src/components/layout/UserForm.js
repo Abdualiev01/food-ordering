@@ -1,7 +1,8 @@
-import { useState } from "react";
-import AddressInputs from "./AddressInputs";
-import EditableImage from "./EditableImage";
+"use client";
+import AddressInputs from "@/components/layout/AddressInputs";
+import EditableImage from "@/components/layout/EditableImage";
 import { useProfile } from "@/components/UseProfile";
+import { useState } from "react";
 
 export default function UserForm({ user, onSave }) {
   const [userName, setUserName] = useState(user?.name || "");
@@ -21,6 +22,7 @@ export default function UserForm({ user, onSave }) {
     if (propName === "city") setCity(value);
     if (propName === "country") setCountry(value);
   }
+
   return (
     <div className="md:flex gap-4">
       <div>
@@ -54,7 +56,7 @@ export default function UserForm({ user, onSave }) {
         <input
           type="email"
           disabled={true}
-          value={user?.email}
+          value={user.email}
           placeholder={"email"}
         />
         <AddressInputs
