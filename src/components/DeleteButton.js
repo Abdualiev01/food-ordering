@@ -1,6 +1,6 @@
-import { useState } from "react";
+import {useState} from "react";
 
-export default function DeleteButton({ label, onDelete }) {
+export default function DeleteButton({label,onDelete}) {
   const [showConfirm, setShowConfirm] = useState(false);
 
   if (showConfirm) {
@@ -18,8 +18,7 @@ export default function DeleteButton({ label, onDelete }) {
                 setShowConfirm(false);
               }}
               type="button"
-              className="primary"
-            >
+              className="primary">
               Yes,&nbsp;delete!
             </button>
           </div>
